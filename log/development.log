@@ -127,3 +127,15 @@ Processing by ArticlesController#edit as HTML
 Completed 200 OK in 113ms (Views: 107.9ms | ActiveRecord: 0.2ms)
 
 
+Started PATCH "/articles/1" for 99.127.130.175 at 2020-09-08 03:39:19 +0000
+Cannot render console from 99.127.130.175! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qzD4oJ9b+uT3gYS7s+VjE3oeZj85Z7GacY/MEGTUmXFBdRYwry/frOrsZwGmYX8aOSzhnlzZAxSWDUOT1wXlBA==", "article"=>{"title"=>"MY First Article", "body"=>"The first article after scaffolding!!!"}, "commit"=>"Update Article", "id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "articles" SET "title" = ?, "body" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["title", "MY First Article"], ["body", "The first article after scaffolding!!!"], ["updated_at", "2020-09-08 03:39:19.886889"], ["id", 1]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://67.205.152.27:58636/articles/1
+Completed 302 Found in 9ms (ActiveRecord: 3.1ms)
+
+
